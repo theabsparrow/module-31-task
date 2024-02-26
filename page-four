@@ -1,0 +1,29 @@
+const peoples = [
+    {name: "mena", age: 20},
+    {name: "rina", age: 15},
+    {name: "suchorita", age: 22}
+];
+// let addition = 0;
+// ________ with for of loop___________
+// for(let people of peoples){
+//     const age = people.age;
+//     addition = addition + age;
+// }
+// console.log(addition);
+
+// _________with for of loop___________
+// for(let i = 0; i < peoples.length; i++){
+//     const value = peoples[i];
+//     const ageValue = value.age;
+//     addition = addition + ageValue;
+    
+// }
+// console.log(addition);
+
+// ___________with reduce method__________
+// const addition = peoples.reduce( (accume, current) => accume + current.age , 0);
+// console.log(addition);
+
+const addition = (current , next) => current + next.age;
+const result = peoples.reduce(addition, 0);
+console.log(result);
